@@ -1,0 +1,11 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+.title {
+	font-weight: 700;
+	line-height: math.div(78, 70);
+	font-size: rem(70);
+	color: #ffffff;
+	span {
+		color: $greenColor;
+	}
+}
