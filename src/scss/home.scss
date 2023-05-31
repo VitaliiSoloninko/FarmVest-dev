@@ -145,3 +145,29 @@
 }
 
 //====================================================================================================
+
+.partners {
+	@include adaptiveValue("padding-bottom", 200, 30);
+	// .partners__container
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: rem(25);
+		flex-wrap: wrap;
+		@media (max-width: em(1240)) {
+			justify-content: center;
+		}
+	}
+
+	// .partners__item
+
+	&__item {
+		text-align: center;
+		padding: 0 rem(15);
+		img {
+			min-width: 100%;
+		}
+	}
+}
