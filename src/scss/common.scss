@@ -7,6 +7,8 @@
 	}
 	&__partners {
 	}
+	&__how {
+	}
 }
 
 .title {
@@ -36,5 +38,26 @@
 	// .form__button
 
 	&__button {
+	}
+}
+
+//========================================================================================================================================================
+
+.image-block {
+	// .image-block__item
+	background: rgba(255, 255, 255, 0.05);
+	display: flex;
+	border-radius: rem(20);
+	@include adaptiveValue("padding-top", 165, 30);
+	@include adaptiveValue("padding-bottom", 165, 30);
+	@include adaptiveValue("padding-left", 45, 30);
+	@include adaptiveValue("padding-right", 45, 30);
+	&__item {
+		flex: 1 1 100%;
+		// .image-block__item_ibg
+		img {
+			max-width: 100%;
+			border-radius: rem(22);
+		}
 	}
 }
