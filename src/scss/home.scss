@@ -34,7 +34,6 @@
 	// .main-block__text
 
 	&__text {
-		line-height: 180%;
 		max-width: rem(570);
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 48, 25);
@@ -55,6 +54,11 @@
 	}
 }
 .icons-main-block {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
 	pointer-events: none;
 	@media (max-width: $mobile) {
 		opacity: 0.2;
