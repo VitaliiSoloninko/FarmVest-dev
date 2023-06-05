@@ -181,7 +181,6 @@
 .how {
 	@include adaptiveValue("padding-bottom", 100, 25);
 	// .how__container
-
 	&__container {
 		display: grid;
 		row-gap: rem(30);
@@ -229,7 +228,6 @@
 		align-self: start;
 	}
 }
-
 .steps-how {
 	// .steps-how__item
 
@@ -278,5 +276,120 @@
 	// .item-how__text
 
 	&__text {
+	}
+}
+
+//====================================================================================================
+
+.pathway {
+	// .pathway__container-big
+	@include adaptiveValue("padding-top", 100, 25);
+	@include adaptiveValue("padding-bottom", 100, 25);
+
+	&__container-big {
+	}
+
+	// .pathway__container
+
+	&__container {
+		display: grid;
+		row-gap: rem(30);
+		@media (min-width: $tablet) {
+			grid-template-columns: percent(694, 1420) 1fr;
+		}
+	}
+
+	// .pathway__image
+
+	&__image {
+		.image-block__circle {
+			top: auto;
+			right: auto;
+			left: 0;
+			bottom: 0;
+		}
+		.image-block__circle_1 {
+			&::before {
+				transform: translate(calc(-50% + rem(18)), -20%);
+			}
+		}
+		.image-block__circle_2 {
+			&::before {
+				transform: translate(calc(-50% + rem(20)), 6%);
+			}
+		}
+	}
+
+	// .pathway__content
+
+	&__content {
+		@include adaptiveValue("padding-left", 126, 30);
+		@media (max-width: $tablet) {
+			padding-left: rem(0);
+		}
+		@media (max-width: $mobileSmall) {
+			text-align: center;
+		}
+	}
+
+	// .pathway__title
+
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 20);
+		}
+	}
+
+	// .pathway__text
+
+	&__text {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 48, 30);
+		}
+	}
+	&__spollers {
+	}
+}
+
+.spollers-pathway {
+	// .spollers-pathway__item
+
+	&__item {
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: rem(10);
+	}
+
+	// .spollers-pathway__title
+
+	&__title {
+		width: 100%;
+		display: block;
+		text-align: left;
+		padding: rem(24) rem(30);
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: rem(10);
+		display: flex;
+		line-height: 177%;
+		font-size: rem(24);
+		align-items: center;
+		justify-content: space-between;
+		&::after {
+			content: "";
+			background: url("@img/icons/arrow.svg") center / 100% no-repeat;
+			flex: 0 0 rem(24);
+			height: rem(24);
+			transition: all 0.3s ease 0s;
+		}
+		&._spoller-active {
+			&::after {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+
+	// .spollers-pathway__body
+
+	&__body {
+		padding: rem(24) rem(30) rem(24) rem(30);
 	}
 }
