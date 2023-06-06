@@ -225,7 +225,6 @@
 	// .how__image
 
 	&__image {
-		align-self: start;
 	}
 }
 .steps-how {
@@ -292,16 +291,17 @@
 	// .pathway__container
 
 	&__container {
-		display: grid;
+		display: flex;
 		row-gap: rem(30);
-		@media (min-width: $tablet) {
-			grid-template-columns: percent(694, 1420) 1fr;
+		@media (max-width: $tablet) {
+			flex-direction: column-reverse;
 		}
 	}
 
 	// .pathway__image
 
 	&__image {
+		flex: 0 0 percent(694, 1420);
 		.image-block__circle {
 			top: auto;
 			right: auto;
@@ -323,6 +323,7 @@
 	// .pathway__content
 
 	&__content {
+		flex: 1 1 auto;
 		@include adaptiveValue("padding-left", 126, 30);
 		@media (max-width: $tablet) {
 			padding-left: rem(0);
@@ -348,6 +349,8 @@
 		}
 	}
 	&__spollers {
+		display: grid;
+		gap: rem(24);
 	}
 }
 
@@ -370,8 +373,9 @@
 		border-radius: rem(10);
 		display: flex;
 		line-height: 177%;
-		font-size: rem(24);
+		@include adaptiveValue("font-size", 24, 18);
 		align-items: center;
+		gap: rem(10);
 		justify-content: space-between;
 		&::after {
 			content: "";
@@ -385,11 +389,18 @@
 				transform: rotate(-180deg);
 			}
 		}
+		@media (max-width: $mobileSmall) {
+			line-height: 130%;
+			padding: rem(18) rem(20);
+		}
 	}
 
 	// .spollers-pathway__body
 
 	&__body {
-		padding: rem(24) rem(30) rem(24) rem(30);
+		padding: rem(24) rem(30);
+		@media (max-width: $mobileSmall) {
+			padding: rem(20) rem(18);
+		}
 	}
 }
