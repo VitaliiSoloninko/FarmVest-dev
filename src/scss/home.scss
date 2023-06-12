@@ -196,9 +196,6 @@
 		@media (max-width: $tablet) {
 			padding-right: rem(0);
 		}
-		@media (max-width: $mobileSmall) {
-			text-align: center;
-		}
 	}
 
 	// .how__title
@@ -228,8 +225,10 @@
 	}
 }
 .steps-how {
+	@media (max-width: $mobileSmall) {
+		text-align: center;
+	}
 	// .steps-how__item
-
 	&__item {
 		max-width: rem(490);
 		display: flex;
@@ -326,9 +325,6 @@
 		@media (max-width: $tablet) {
 			padding-left: rem(0);
 		}
-		@media (max-width: $mobileSmall) {
-			text-align: center;
-		}
 	}
 	// .pathway__title
 	&__title {
@@ -338,6 +334,9 @@
 	}
 	// .pathway__text
 	&__text {
+		@media (max-width: $mobileSmall) {
+			text-align: center;
+		}
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 48, 30);
 		}
@@ -443,6 +442,9 @@
 
 	&__button {
 		min-width: rem(222);
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
 	}
 
 	// .why__image
