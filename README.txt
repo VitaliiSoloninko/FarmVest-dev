@@ -1,13 +1,3 @@
----- Description ----
-One-page landing page.
-
----- Technologies ----
-Developed using HTML SCSS Java Script
-
----- Consists of ----
-
-
----- Sections ----
-
-
----- The project includes ----
+- One-page landing page.
+- Developed using HTML SCSS Java Script GULP WebPack
+- Consists of 7 sections

@@ -135,7 +135,11 @@
 		@media (any-hover: hover) {
 			&:hover {
 				color: $greenColor;
+				text-decoration: underline;
 			}
+		}
+		&._navigator-active {
+			text-decoration: underline;
 		}
 	}
 }
